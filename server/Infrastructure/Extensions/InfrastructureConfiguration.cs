@@ -3,10 +3,13 @@ using System.Linq;
 using System.Threading.Tasks;
 
 using Application.Auth;
+using Application.Features.Users.Commands.ProvisionUser;
 
 using Domain.Users;
 
 using Infrastructure.Auth;
+using Infrastructure.Auth.Configuration;
+using Infrastructure.Clients;
 using Infrastructure.Repositories;
 
 using Microsoft.AspNetCore.Builder;
@@ -24,6 +27,8 @@ public static partial class InfrastructureConfiguration
         services.AddDbContext<AppDbContext>(options =>
             options.UseNpgsql(configuration.GetConnectionString("DefaultConnection"))
         );
+
+        services.AddHttpClient<IUsosHttpClient, UsosHttpClient>();
 
         services.AddScoped<IUserRepository, UserRepository>();
         services.AddSingleton<IUsosIdHasher, HmacUsosIdHasher>();
@@ -53,7 +58,7 @@ public static partial class InfrastructureConfiguration
             })
             .ValidateOnStart();
 
-        services.AddHttpClient<IUsosOAuthService, UsosOAuthService>();
+        services.AddScoped<IUsosOAuthService, UsosOAuthService>();
 
         return services;
     }
