@@ -10,7 +10,7 @@ The project follows the principles of **Clean Architecture**, separating concern
 * **Application:** Holds the business logic, use cases, and interfaces. It orchestrates the flow of data to and from the Domain layer.
 * **Infrastructure:** Implements external concerns like database access (Entity Framework Core), Identity, and third-party integrations.
 * **Presentation:** The entry point of the application (Web API). It contains controllers, global error handling, validation and API endpoints.
-
+dwdwd
 > [!NOTE]
 > **API Documentation:** When running in the development environment, interactive API documentation is available at the `/docs` endpoint.
 
