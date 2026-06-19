@@ -9,7 +9,7 @@ We work with Git following **[Trunk-based Development](https://www.atlassian.com
    - Naming convention: `ID-short-desc`, where ID is the issue ID.
 
 ## Commits
-
+fcdsgvgvdFSG
 We name commit messages according to **[Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)**.
 
 ## Pull Request (PR) Lifecycle
