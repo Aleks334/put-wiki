@@ -13,7 +13,7 @@ export default function Footer() {
             </div>
             <h2>PUT - WIKI</h2>
             Nowoczesne wsparcie dla studentów Politechniki Poznańskiej. Wszystkie informacje w
-            jednym miejscu. !!!!!
+            jednym miejscu. !!!!!dsdsd
           </div>
 
           {footerSections.map((section) => (
