@@ -7,6 +7,7 @@ on:
             - main
         paths:
             - "server/**"
+            - "!server/**/*.md"
 
 concurrency:
     group: ${{ github.workflow }}-${{ github.ref }}
